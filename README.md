@@ -135,6 +135,16 @@ Then restart VS Code.
 python src/my_script.py
 ```
 
+### Verifying PyTorch Installation
+
+After bootstrap setup completes, verify that PyTorch is working correctly:
+
+```bash
+python scripts/test-pytorch.py
+```
+
+This script tests PyTorch functionality, CUDA availability (if applicable), tensor operations, and autograd. All tests should pass with a green checkmark.
+
 ### Tests
 
 ```bash
