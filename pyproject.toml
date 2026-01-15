@@ -1,5 +1,5 @@
 [project]
-name = "engineering-ai-project"
+name = "eai-project"
 version = "0.1.0"
 description = "Engineering Artificial Intelligence course project"
 readme = "README.md"
