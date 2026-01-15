@@ -16,14 +16,6 @@ uv python install "${PY_VERSION}"
 echo "Creating virtual environment and installing dependencies..."
 uv sync
 
-echo "Configuring VS Code..."
-mkdir -p .vscode
-cat > .vscode/settings.json <<EOF
-{
-  "python.defaultInterpreterPath": "\${workspaceFolder}/.venv/bin/python"
-}
-EOF
-
 echo "✓ Setup complete!"
 echo ""
 echo "Next steps:"

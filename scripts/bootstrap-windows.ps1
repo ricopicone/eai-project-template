@@ -14,17 +14,6 @@ uv python install $PyVersion
 Write-Host "Creating virtual environment and installing dependencies..."
 uv sync
 
-Write-Host "Configuring VS Code..."
-if (-not (Test-Path ".vscode")) {
-  New-Item -ItemType Directory -Path ".vscode" -Force | Out-Null
-}
-
-$settings = @{
-  "python.defaultInterpreterPath" = "`${workspaceFolder}\.venv\Scripts\python.exe"
-} | ConvertTo-Json
-
-$settings | Out-File -Encoding UTF8 ".vscode/settings.json"
-
 Write-Host "`u{2713} Setup complete!"
 Write-Host ""
 Write-Host "Next steps:"
