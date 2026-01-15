@@ -6,5 +6,27 @@
   "[python]": {
     "editor.defaultFormatter": "ms-python.python",
     "editor.formatOnSave": true
+  },
+  "terminal.integrated.profiles.osx": {
+    "bash": {
+      "path": "bash",
+      "args": ["-l"]
+    }
+  },
+  "terminal.integrated.profiles.windows": {
+    "bash": {
+      "path": "bash.exe",
+      "args": ["-l"]
+    }
+  },
+  "terminal.integrated.defaultProfile.osx": "bash",
+  "terminal.integrated.defaultProfile.windows": "bash",
+  "terminal.integrated.env.osx": {
+    "VIRTUAL_ENV": "${workspaceFolder}/.venv",
+    "PATH": "${workspaceFolder}/.venv/bin:${env:PATH}"
+  },
+  "terminal.integrated.env.windows": {
+    "VIRTUAL_ENV": "${workspaceFolder}\\.venv",
+    "PATH": "${workspaceFolder}\\.venv\\Scripts;${env:PATH}"
   }
 }
