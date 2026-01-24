@@ -1,6 +1,12 @@
 $ErrorActionPreference = "Stop"
 $PyVersion = "3.13"
 
+try {
+  Set-ExecutionPolicy -Scope CurrentUser -ExecutionPolicy RemoteSigned -Force -ErrorAction Stop
+} catch {
+  Write-Host "WARNING: Could not set execution policy (possibly managed by IT)."
+}
+
 if (-not (Get-Command uv -ErrorAction SilentlyContinue)) {
   Write-Host "ERROR: uv is not installed."
   Write-Host "Install uv first:"

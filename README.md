@@ -39,6 +39,11 @@ bash scripts/bootstrap-macos.sh
 powershell -ExecutionPolicy Bypass -File .\scripts\bootstrap-windows.ps1
 ```
 
+**Linux / WSL:**
+```bash
+bash scripts/bootstrap-linux.sh
+```
+
 The script will:
 - Install Python 3.13 (if not already installed)
 - Create a virtual environment (`.venv`)
@@ -67,6 +72,7 @@ your-project/
 │   └── settings.json        # VS Code workspace settings
 ├── scripts/
 │   ├── bootstrap-macos.sh   # macOS setup script
+│   ├── bootstrap-linux.sh   # Linux/WSL setup script
 │   └── bootstrap-windows.ps1 # Windows setup script
 ├── src/                     # Your Python source code
 └── tests/                   # Test files

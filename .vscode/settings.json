@@ -1,27 +1,30 @@
 {
   "python.defaultInterpreterPath": "${workspaceFolder}/.venv/bin/python",
-  "python.linting.enabled": true,
-  "python.linting.pylintEnabled": true,
-  "editor.formatOnSave": true,
-  "[python]": {
-    "editor.defaultFormatter": "ms-python.python",
-    "editor.formatOnSave": true
-  },
-  "terminal.integrated.profiles.osx": {
-    "bash": {
-      "path": "bash",
-      "args": ["-l"]
-    }
-  },
+  "python.defaultInterpreterPath.windows": "${workspaceFolder}\\.venv\\Scripts\\python.exe",
+
   "terminal.integrated.profiles.windows": {
-    "bash": {
-      "path": "bash.exe",
-      "args": ["-l"]
-    }
+    "Git Bash": { "source": "Git Bash" },
+    "PowerShell": { "source": "PowerShell" },
+    "Command Prompt": { "source": "Command Prompt" },
+    "WSL": { "source": "WSL" }
+  },
+  "terminal.integrated.defaultProfile.windows": "Git Bash",
+
+  "terminal.integrated.profiles.osx": {
+    "bash": { "path": "bash", "args": ["-l"] }
   },
   "terminal.integrated.defaultProfile.osx": "bash",
-  "terminal.integrated.defaultProfile.windows": "bash",
+
+  "terminal.integrated.profiles.linux": {
+    "bash": { "path": "/bin/bash", "args": ["-l"] }
+  },
+  "terminal.integrated.defaultProfile.linux": "bash",
+
   "terminal.integrated.env.osx": {
+    "VIRTUAL_ENV": "${workspaceFolder}/.venv",
+    "PATH": "${workspaceFolder}/.venv/bin:${env:PATH}"
+  },
+  "terminal.integrated.env.linux": {
     "VIRTUAL_ENV": "${workspaceFolder}/.venv",
     "PATH": "${workspaceFolder}/.venv/bin:${env:PATH}"
   },
