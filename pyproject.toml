@@ -12,4 +12,5 @@ dependencies = [
   "torch",
   "torchvision",
   "torchaudio",
+  "z3-solver"
 ]
