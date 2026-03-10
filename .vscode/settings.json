@@ -1,5 +1,7 @@
 {
   "python.defaultInterpreterPath": "${workspaceFolder}/.venv",
+  "python.venvPath": "${workspaceFolder}",
+  "python.terminal.activateEnvironment": true,
 
   "terminal.integrated.profiles.windows": {
     "PowerShell": {
