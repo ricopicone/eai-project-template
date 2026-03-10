@@ -14,6 +14,18 @@ if (-not (Get-Command uv -ErrorAction SilentlyContinue)) {
   exit 1
 }
 
+# Check for Visual C++ Redistributable (required by PyTorch on Windows)
+$vcInstalled = Test-Path "HKLM:\SOFTWARE\Microsoft\VisualStudio\14.0\VC\Runtimes\x64"
+if (-not $vcInstalled) {
+  Write-Host ""
+  Write-Host "WARNING: Microsoft Visual C++ Redistributable not detected."
+  Write-Host "PyTorch requires it to run on Windows."
+  Write-Host "Download and install from: https://aka.ms/vs/17/release/vc_redist.x64.exe"
+  Write-Host ""
+  $response = Read-Host "Continue anyway? (y/N)"
+  if ($response -ne "y") { exit 1 }
+}
+
 Write-Host "Installing Python $PyVersion..."
 uv python install $PyVersion
 
